@@ -1,0 +1,30 @@
+.btn1 
+{
+    padding:10px 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: lightseagreen;
+    font-size: 16px;
+}
+.login_Container
+{
+    background-color: antiquewhite;
+    width: 100%;
+    padding:10px;
+    text-align: center;
+}
+.form_control_input
+{
+    padding: 10px;
+    margin: 10px;
+}
+
+.inc_dec_container
+{
+    width: 40%;
+    background-color: bisque;
+    padding: 2% 5%;
+    text-align: center;
+    margin-left: 30%;
+    color:black;
+}

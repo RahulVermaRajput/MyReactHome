@@ -1,0 +1,20 @@
+.container
+{
+    border:1px solid black;
+    height: 300px;
+    text-align: center;
+    background: #404258;
+    padding-left:30%;
+    padding-top: 10%;
+}
+
+.msgBox
+{
+    border:1px solid rgb(31, 65, 205);
+    box-shadow: 2px 2px 2px 2px grey;
+    border-radius: 10px;
+    padding:2px 20px;
+    width: 30%;
+    background-color: aqua;
+    margin-left: 1%;
+}
