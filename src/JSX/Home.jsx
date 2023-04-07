@@ -1,4 +1,5 @@
 import React from "react";
+import Greeting from "../JSX/Greeting"
 function Home()
 {
     return (
@@ -6,10 +7,9 @@ function Home()
             <div class="row">
                 <div class="col-10 mx-auto">
                     <div class="col-md-6 pt-5 pt-lg-0 order-2 order-lg-1">
-                        <h1>This is a test WebSite hosted on github.</h1>
-                        <h1>This is a test WebSite</h1>
-                        <h1>This is a test WebSite</h1>
-                        <h1>This is a test WebSite</h1>
+                        <br/>
+                        <Greeting/>
+                        <br/>
                         <a href = "#123" className="btn-get-started btn btn-round btn-primary" >Get Started</a>
 
                     </div>
