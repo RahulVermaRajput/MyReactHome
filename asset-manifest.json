@@ -1,13 +1,15 @@
 {
-  "main.js": "/MyReactHome/static/js/main.3590219e.chunk.js",
-  "main.js.map": "/MyReactHome/static/js/main.3590219e.chunk.js.map",
+  "main.css": "/MyReactHome/static/css/main.56fe89e1.chunk.css",
+  "main.js": "/MyReactHome/static/js/main.cf35144d.chunk.js",
+  "main.js.map": "/MyReactHome/static/js/main.cf35144d.chunk.js.map",
   "static/css/1.0d859108.chunk.css": "/MyReactHome/static/css/1.0d859108.chunk.css",
   "static/js/1.70cfe8e5.chunk.js": "/MyReactHome/static/js/1.70cfe8e5.chunk.js",
   "static/js/1.70cfe8e5.chunk.js.map": "/MyReactHome/static/js/1.70cfe8e5.chunk.js.map",
   "runtime~main.js": "/MyReactHome/static/js/runtime~main.64af3cd7.js",
   "runtime~main.js.map": "/MyReactHome/static/js/runtime~main.64af3cd7.js.map",
+  "static/css/main.56fe89e1.chunk.css.map": "/MyReactHome/static/css/main.56fe89e1.chunk.css.map",
   "static/css/1.0d859108.chunk.css.map": "/MyReactHome/static/css/1.0d859108.chunk.css.map",
   "index.html": "/MyReactHome/index.html",
-  "precache-manifest.59f6d6df50ba0cbcd052c9b42a9cbdbb.js": "/MyReactHome/precache-manifest.59f6d6df50ba0cbcd052c9b42a9cbdbb.js",
+  "precache-manifest.aaeb3e53702754f1768d2adcd0740697.js": "/MyReactHome/precache-manifest.aaeb3e53702754f1768d2adcd0740697.js",
   "service-worker.js": "/MyReactHome/service-worker.js"
 }
