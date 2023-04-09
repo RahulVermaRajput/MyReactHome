@@ -7,6 +7,9 @@ import Home from "./Home";
 import Services from "./Services";
 import Contact from "./Contact";
 import NavBar from "./NavBar";
+import CrudRead from "./CrudRead";
+import CrudAdd from "./CrudAdd";
+import CrudUpdate from "./CrudUpdate";
 function App()
 {
     return (
@@ -17,6 +20,9 @@ function App()
             <Route exact path = "/about" element={<About/>} />
             <Route exact path = "/services" element={<Services/>} />
             <Route exact path = "/contact" element={<Contact/>} />
+            <Route exact path = "/crudapp" element={<CrudRead/>} />
+            <Route exact path = "/crudadd" element={<CrudAdd/>} />
+            <Route exact path = "/crudupdate" element={<CrudUpdate/>} />
         </Routes>
         </>
     );
