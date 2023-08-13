@@ -58,7 +58,7 @@ const CrudAdd = () => {
                 <div className="col-sm-4">
                 </div>
                 <div className="col-sm-4">
-                    <NavLink className="btn btn-outline-secondary right my-2" to="/crudapp" >Show All Users Data</NavLink>
+                    <NavLink className="btn btn-outline-secondary right my-2" to="/crudapp/crudread" >Show All Users Data</NavLink>
                     {/* <p>Name : {name}</p>
                     <p>Mail : {mail}</p>
                     <p>Contact : {contact}</p>

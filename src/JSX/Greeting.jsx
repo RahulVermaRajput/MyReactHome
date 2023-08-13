@@ -6,32 +6,39 @@ let message = "Good Morning";
 
 let bgstyle=
 {
-    color:'#FFDD83'
+    color:'blue'
 }
 
 if(hours>=12 && hours<18)
 {
     message = "Good AfterNoon";
-    bgstyle.color = "#F2921D"
+    bgstyle.bgcolor = "#F2921D"
+    bgstyle.color = "white"
 }
 else if(hours>=18 && hours <21)
 {
     message = "Good Evening";
-    bgstyle.color = "#10A19D"
+    bgstyle.bgcolor = "#10A19D"
+    bgstyle.color = "white" 
 }
 else if(hours>=21 && hours <=24)
 {
     message = "Good Night";  
-    bgstyle.color = "#3A1078" 
+    bgstyle.bgcolor = "#3A1078"
+    bgstyle.color = "white" 
 }
 
 function GreetingApp()
 {
     return(
-   <div className="">
-        <div className="msgBox" style = {{background:bgstyle.color}} >
-            <h1>Hello There , <span> {message}</span></h1>
+   <div className="container-fluid">
+    <div className="row">
+        <div className="col-sm-12 my-5">
+        <div className="msgBox" style = {{background:bgstyle.bgcolor,width:"300px",color:bgstyle.color}} >
+            <h1>Hello There,<br/><span> {message}</span></h1>
         </div>
+        </div>
+    </div>
    </div>
     );
 }

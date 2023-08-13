@@ -11,7 +11,7 @@ function CrudRead() {
     useEffect(() => {
         setTimeout(() => {
             fetchData();
-        }, 1000);
+        }, 100);
 
     }, []);
 
@@ -97,7 +97,7 @@ function CrudRead() {
                 </tbody>
             </table>
 
-            <NavLink className="btn btn-outline-success btn-xs" to="/crudadd">Add New User</NavLink>
+            <NavLink className="btn btn-outline-success btn-xs" to="/crudapp/crudadd">Add New User</NavLink>
 
         </div>
 
