@@ -29,7 +29,7 @@ const CrudLeftNavbar = () => {
                 </ul>
             </div>
         </div>
-        <div className="col-sm-10 mx-auto">
+        <div className="col-sm-10 mx-auto content">
           <Outlet/>
         </div>
     </div>

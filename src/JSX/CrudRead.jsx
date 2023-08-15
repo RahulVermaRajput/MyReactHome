@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
-import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
-import EditIcon from '@material-ui/icons/Edit';
-import { LinearProgress } from "@material-ui/core";
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import EditIcon from '@mui/icons-material/Edit';
+import { LinearProgress } from "@mui/material";
 
 function CrudRead() {
 
@@ -85,9 +85,9 @@ function CrudRead() {
                                         <td>{u.contact}</td>
                                         <td>{u.address}</td>
                                         <td>
-                                            <NavLink to="/crudupdate"><button className="btn btn-primary btn-xs mx-0" onClick={() => setLocalStorage(u.id, u.name, u.email, u.contact, u.address)} ><EditIcon /></button></NavLink>
+                                            <NavLink to="/crudupdate"><button className="btn btn-primary btn-xs mx-0" onClick={() => setLocalStorage(u.id, u.name, u.email, u.contact, u.address)} ><EditIcon/></button></NavLink>
 
-                                            <button className="btn btn-danger btn-xs mx-2" onClick={() => { deleteData(u.id) }} ><DeleteForeverIcon /></button>
+                                            <button className="btn btn-danger btn-xs mx-2" onClick={() => { deleteData(u.id) }} ><DeleteForeverIcon/></button>
                                         </td>
                                     </tr>
                                 </>
