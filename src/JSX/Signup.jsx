@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Outlet } from 'react-router-dom';
+import "../CSS/common.css";
+import { Button, ButtonGroup } from "@mui/material";
 
 
-const CrudSignUp = () => {
+
+const SignUp = () => {
     
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -30,10 +32,9 @@ const CrudSignUp = () => {
 
   return (
     <>
-                <div className="mx-auto my-auto" style={{width:"500px"}}>
-                    <br/><br/>
+                <div className="signupform" >
                     <form>
-                        <h4>Sign Up</h4>
+                        <h2>Sign Up Here</h2>
                         <br/>
                     <div className="form-floating mb-3">
                         <input type="text" className="form-control" autoComplete='off' onChange={(e)=>{setUsername(e.target.value)}} id="floatingInput" placeholder="name@example.com"/>
@@ -47,8 +48,10 @@ const CrudSignUp = () => {
                         <input type="text" className="form-control"  onChange={(e)=>{setEmail(e.target.value)}} id="floatingInput" placeholder="name@example.com"/>
                         <label htmlFor="floatingInput">User Name</label>
                     </div>
+                    <br/>
+                    <Button variant="contained"> Sign Up </Button>
 
-                    <input type = "submit" className="btn btn-outline-primary" onClick={handleSignUp} value = "Sign Up"/>
+                    
                     </form>
                 </div>
     </>
@@ -56,4 +59,4 @@ const CrudSignUp = () => {
   );
 };
 
-export default CrudSignUp;
+export default SignUp;

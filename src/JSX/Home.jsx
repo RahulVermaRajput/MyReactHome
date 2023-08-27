@@ -1,47 +1,29 @@
 import React from "react";
 import Greeting from "../JSX/Greeting"
 import { Button, ButtonGroup } from "@mui/material";
-function Home()
-{
+import { NavLink, Outlet } from "react-router-dom";
+function Home() {
     const fullPageStyle = {
-        backgroundColor: '#000000',
         color: 'white',
         fontSize: '16px',
-        height:'100vh',
+        height: '100vh',
+        textAlign:'center',
+        display: 'grid',
     };
 
-    const center =  {
+    const center = {
         padding: '70px 0',
         border: '3px solid green',
         textAlign: 'center',
-      };
+        backgroundColor: "red",
+        height: '100vh',
+        width: '100%',
+
+    };
 
     return (
         <>
-         {/* <Greeting/> */}
-         <div style = {fullPageStyle}>
-        <div className="container-fluid row">
-            <div className="col-sm-2">
-            <br/><br/>
-            <br/><br/>
-            <br/><br/>
-            <br/><br/>
-            <Button variant="contained"> Home </Button>
-            <br/><br/>
-            <Button variant="contained"> Login </Button>
-            <br/><br/>
-            <Button variant="contained"> Sign Up </Button>
-               
-            </div>
-            <div className="col-sm-6 center" style ={center}>
-                <h1>Login Page</h1>
-            </div>
-        </div>
-        </div>
-        
-
-
-
+            <Greeting/>
         </>
     );
 }

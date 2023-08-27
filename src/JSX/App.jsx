@@ -10,11 +10,12 @@ import NavBar from "./NavBar";
 import CrudAdd from "./CrudAdd";
 import CrudUpdate from "./CrudUpdate";
 import CrudDashboard from "./CrudDashboard";
-import CrudLoginPage from "./CrudLogin";
-import CrudSignUp from "./CrudSignup";
 import CrudHome from "./CrudHome";
 import CrudRead from "./CrudRead";
 import GreetingApp from "./Greeting";
+import LoginPage from "./LoginPage";
+import SignUp from "./Signup";
+import Main from "./Main";
 function App()
 {
     return (
@@ -22,15 +23,21 @@ function App()
         {/* <NavBar/> */}
         {/* <div style = {{padding:"28px"}}></div> */}
         <Routes>
-            <Route exact path = "/" element={<Home/>} />
+           
+
+            <Route exact path = "/" element={<Main/>} >
+                <Route exact path = "/" element={<Home/>} />
+                <Route exact path = "login" element={<LoginPage/>} />
+                <Route exact path = "signup" element={<SignUp/>} />
+            </Route>
+            
             <Route exact path = "/greet" element={<GreetingApp/>} />
             <Route exact path = "/about" element={<About/>} />
             <Route exact path = "/services" element={<Services/>} />
             <Route exact path = "/contact" element={<Contact/>} />
             <Route exact path = "/crudapp" element={<CrudDashboard/>} >
                 <Route exact path = "crudhome" element={<CrudHome/>} />
-                 <Route exact path = "crudlogin" element={<CrudLoginPage/>} />
-                 <Route exact path = "crudsignup" element={<CrudSignUp/>} />
+                 
                  <Route exact path = "crudadd" element={<CrudAdd/>} />
                  <Route exact path = "crudread" element={<CrudRead/>} />
                  <Route exact path = "crudupdate" element={<CrudUpdate/>} />

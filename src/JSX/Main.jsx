@@ -1,0 +1,48 @@
+import React from "react";
+import Greeting from "./Greeting"
+import { Button, ButtonGroup } from "@mui/material";
+import { NavLink, Outlet } from "react-router-dom";
+function Main() {
+    const fullPageStyle = {
+        fontSize: '16px',
+        height: '100vh',
+        textAlign:'center',
+    };
+
+    const center = {
+        padding: '70px 0',
+        border: '3px solid green',
+        textAlign: 'center',
+        backgroundColor: "red",
+        height: '100vh',
+        width: '100%',
+
+    };
+
+    return (
+        <>
+            {/* <Greeting/> */}
+            <div className="container-fluid" style={fullPageStyle}>
+
+                <div class="row">
+                    <div class="col-sm-2 p-3 bg-dark">
+                    <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+                    <NavLink to="/" className="nav-link" ><Button variant="outlined" style = {{width:'120px'}}> Home </Button></NavLink>
+                        <br />
+                    <NavLink to="/login" className="nav-link" > <Button variant="outlined" style = {{width:'120px'}}> Login </Button></NavLink>
+                        <br />
+                    <NavLink to="/signup" className="nav-link" ><Button variant="outlined" style = {{width:'120px'}}> Sign Up </Button></NavLink>
+                    </div>
+                    <div class="col-sm-10 p-3 bg-secondary" style={fullPageStyle}>
+                       <Outlet/>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </>
+    );
+}
+export default Main;
