@@ -14,14 +14,16 @@ import CrudLoginPage from "./CrudLogin";
 import CrudSignUp from "./CrudSignup";
 import CrudHome from "./CrudHome";
 import CrudRead from "./CrudRead";
+import GreetingApp from "./Greeting";
 function App()
 {
     return (
         <>  
-        <NavBar/>
-        <div style = {{padding:"28px"}}></div>
+        {/* <NavBar/> */}
+        {/* <div style = {{padding:"28px"}}></div> */}
         <Routes>
             <Route exact path = "/" element={<Home/>} />
+            <Route exact path = "/greet" element={<GreetingApp/>} />
             <Route exact path = "/about" element={<About/>} />
             <Route exact path = "/services" element={<Services/>} />
             <Route exact path = "/contact" element={<Contact/>} />
