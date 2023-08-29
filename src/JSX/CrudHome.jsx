@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 
 const CrudHome = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  // const [username, setUsername] = useState('');
+  // const [password, setPassword] = useState('');
 
-  const handleLogin = (event) => {
-    console.log(username);
-    console.log(password);
-  };
+  // const handleLogin = (event) => {
+  //   console.log(username);
+  //   console.log(password);
+  // };
 
   return (
     <>

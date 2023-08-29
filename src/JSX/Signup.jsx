@@ -1,32 +1,41 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import "../CSS/common.css";
-import { Button, ButtonGroup } from "@mui/material";
+import { Button } from "@mui/material";
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const SignUp = () => {
     
+    const navigate = useNavigate();
+
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [email, setEmail] = useState('');
+    const [loginid, setLoginid] = useState('');
     const handleSignUp = (event) => {
     event.preventDefault();
     console.log(username);
     console.log(password);
-    console.log(email);
+    console.log(loginid);
 
     axios.post('https://6432926ed0127730d2d51abb.mockapi.io/rvapi/loginusers',
     {
-        username:username,
-        emailid:email,
+        name:username,
+        loginid:loginid,
         password:password,
     }
     ).then((response)=>{
         console.log(response);
-       // history("/crudapp");
+        toast('🦄 Sign Up Completed!!!');
+        setUsername("");
+        setPassword("");
+        setLoginid("");
+        navigate("/login");
     }).catch((error)=>{
         console.log(error);
+        toast('🦄 '+error);
     });
   };
 
@@ -37,21 +46,19 @@ const SignUp = () => {
                         <h2>Sign Up Here</h2>
                         <br/>
                     <div className="form-floating mb-3">
-                        <input type="text" className="form-control" autoComplete='off' onChange={(e)=>{setUsername(e.target.value)}} id="floatingInput" placeholder="name@example.com"/>
-                        <label htmlFor="floatingInput">Email</label>
+                        <input type="text" className="form-control" autoComplete='off' onChange={(e)=>{setLoginid(e.target.value)}} id="floatingInputLoginid" placeholder=''/>
+                        <label htmlFor="floatingInputLoginid">Login ID</label>
                     </div>
                     <div className="form-floating mb-3">
-                        <input type="password" className="form-control"  onChange={(e)=>{setPassword(e.target.value)}} id="floatingInput" placeholder="name@example.com"/>
-                        <label htmlFor="floatingInput">Password</label>
+                        <input type="password" className="form-control"  onChange={(e)=>{setPassword(e.target.value)}} id="floatingInputPassword" placeholder='' />
+                        <label htmlFor="floatingInputPassword">Password</label>
                     </div>
                     <div className="form-floating mb-3">
-                        <input type="text" className="form-control"  onChange={(e)=>{setEmail(e.target.value)}} id="floatingInput" placeholder="name@example.com"/>
-                        <label htmlFor="floatingInput">User Name</label>
+                        <input type="text" className="form-control"  onChange={(e)=>{setUsername(e.target.value)}} id="floatingInputName" placeholder='' />
+                        <label htmlFor="floatingInputName">Your Name</label>
                     </div>
                     <br/>
-                    <Button variant="contained"> Sign Up </Button>
-
-                    
+                        <Button variant="contained" onClick={handleSignUp}> Sign Up </Button>
                     </form>
                 </div>
     </>

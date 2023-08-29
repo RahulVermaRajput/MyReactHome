@@ -3,7 +3,12 @@ import "../CSS/Greeting.css";
 
 const hours = new Date().getHours();
 let message = "Good Morning";
-
+let username  = localStorage.getItem('username');
+console.log(username);
+if(username === '')
+{
+    username = "there";
+} 
 let bgstyle=
 {
     color:'blue'
@@ -35,7 +40,7 @@ function GreetingApp()
     <div className="row">
         <div className="col-sm-12 my-5">
         <div className="msgBox" style = {{background:bgstyle.bgcolor,width:"300px",color:bgstyle.color}} >
-            <h1>Hello There,<br/><span> {message}</span></h1>
+            <h1>Hello {username} , <br/><span> {message}</span></h1>
         </div>
         </div>
     </div>
