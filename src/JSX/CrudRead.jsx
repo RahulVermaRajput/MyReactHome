@@ -85,7 +85,7 @@ function CrudRead() {
                                         <td>{u.contact}</td>
                                         <td>{u.address}</td>
                                         <td>
-                                            <NavLink to="/crudupdate"><button className="btn btn-primary btn-xs mx-0" onClick={() => setLocalStorage(u.id, u.name, u.email, u.contact, u.address)} ><EditIcon/></button></NavLink>
+                                            <NavLink to="/valid/crudapp/crudupdate"><button className="btn btn-primary btn-xs mx-0" onClick={() => setLocalStorage(u.id, u.name, u.email, u.contact, u.address)} ><EditIcon/></button></NavLink>
 
                                             <button className="btn btn-danger btn-xs mx-2" onClick={() => { deleteData(u.id) }} ><DeleteForeverIcon/></button>
                                         </td>

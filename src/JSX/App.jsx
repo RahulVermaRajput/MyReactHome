@@ -16,6 +16,7 @@ import GreetingApp from "./Greeting";
 import LoginPage from "./LoginPage";
 import SignUp from "./Signup";
 import Main from "./Main";
+import NavBar from "./NavBar";
 import { ToastContainer } from "react-toastify";
 function App()
 {
@@ -46,6 +47,7 @@ function App()
                                     <Route exact path="crudadd" element={<CrudAdd />} />
                                     <Route exact path="crudread" element={<CrudRead />} />
                                     <Route exact path="crudupdate" element={<CrudUpdate />} />
+                                    <Route exact path="home" element={<GreetingApp />} />
                                 </Route>
                             </Route>
                         )

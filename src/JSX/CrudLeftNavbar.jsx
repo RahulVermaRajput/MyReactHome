@@ -11,7 +11,10 @@ const CrudLeftNavbar = () => {
             <div className="left-navbar">
                 <ul className="navbar-nav">
                 <li className="nav-item">
-                  <NavLink to="/valid/crudapp/crudhome" className="nav-link" >Home</NavLink>
+                <NavLink to="/valid/crudapp/home" className="nav-link">Main Home</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink to="/valid/crudapp/crudhome" className="nav-link" >Crud Home</NavLink>
                 </li>
                 <li className="nav-item">
                 <NavLink to="/valid/crudapp/crudadd" className="nav-link">Crud Add</NavLink>
@@ -19,6 +22,7 @@ const CrudLeftNavbar = () => {
                 <li className="nav-item">
                 <NavLink to="/valid/crudapp/crudread" className="nav-link">Crud Read</NavLink>
                 </li>
+                
                 </ul>
             </div>
         </div>

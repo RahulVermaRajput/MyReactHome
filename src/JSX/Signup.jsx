@@ -23,7 +23,7 @@ const SignUp = () => {
 
     console.log(username);
     console.log(password);
-    console.log(loginid);
+    console.log(email);
 
     if(emailPattern.test(email))
     {
@@ -46,7 +46,7 @@ const SignUp = () => {
         console.log("UserName Done");
     }
     else{
-        alert("Please enter at least 3 alphabetical characters.");
+        alert("UserName must be atleast 3 alphabetical characters.");
         return;
     }
     
