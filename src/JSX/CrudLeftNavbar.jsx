@@ -1,7 +1,7 @@
 import React from 'react';
 import '../CSS/crud.css';
 import { NavLink, Outlet } from 'react-router-dom';
-import CrudHome from './CrudHome';
+// import CrudHome from './CrudHome';
 
 const CrudLeftNavbar = () => {
   return (
@@ -12,19 +12,13 @@ const CrudLeftNavbar = () => {
             <div className="left-navbar">
                 <ul className="navbar-nav">
                 <li className="nav-item">
-                  <NavLink to="/crudapp/crudhome" className="nav-link" >Home</NavLink>
+                  <NavLink to="/valid/crudapp/crudhome" className="nav-link" >Home</NavLink>
                 </li>
                 <li className="nav-item">
-                <NavLink to="/crudapp/crudlogin" className="nav-link">Login</NavLink>
+                <NavLink to="/valid/crudapp/crudadd" className="nav-link">Crud Add</NavLink>
                 </li>
                 <li className="nav-item">
-                <NavLink to="/crudapp/crudsignup" className="nav-link" activeClassName="active-link">SignUp</NavLink>
-                </li>
-                <li className="nav-item">
-                <NavLink to="/crudapp/crudadd" className="nav-link">Crud Add</NavLink>
-                </li>
-                <li className="nav-item">
-                <NavLink to="/crudapp/crudread" className="nav-link">Crud Read</NavLink>
+                <NavLink to="/valid/crudapp/crudread" className="nav-link">Crud Read</NavLink>
                 </li>
                 </ul>
             </div>

@@ -97,7 +97,7 @@ function CrudRead() {
                 </tbody>
             </table>
 
-            <NavLink className="btn btn-outline-success btn-xs" to="/crudapp/crudadd">Add New User</NavLink>
+            {/* <NavLink className="btn btn-outline-success btn-xs" to="/valid/crudapp/crudadd">Add New User</NavLink> */}
 
         </div>
 

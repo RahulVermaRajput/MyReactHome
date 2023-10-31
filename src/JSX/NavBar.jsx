@@ -1,6 +1,17 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-export default function NavBar() {
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
+export default function NavBar(props) {
+  const navigate = useNavigate();
+
+  const handleLogout=()=>{
+      localStorage.removeItem("isUserValid");
+      localStorage.removeItem("username");
+      localStorage.removeItem("emailid");
+      props.onLogout();
+      navigate('/');
+  }
+
+
   return (
     <>
       <nav className="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
@@ -12,25 +23,31 @@ export default function NavBar() {
           <div className="collapse navbar-collapse" id="collapsibleNavbar">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <NavLink className="nav-link" to="/">Home</NavLink>
+                <NavLink className="nav-link" to="/valid/home">Home</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/services">Services</NavLink>
+                <NavLink className="nav-link" to="/valid/services">Services</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/about">About Us</NavLink>
+                <NavLink className="nav-link" to="/valid/about">About Us</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/contact">Contact Us</NavLink>
+                <NavLink className="nav-link" to="/valid/contact">Contact Us</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/crudapp">My CRUD App</NavLink>
+                <NavLink className="nav-link" to="/valid/crudapp/crudhome">My CRUD App</NavLink>
               </li>
+             
             
             </ul>
           </div>
+          <form className="d-flex">
+          <button className="btn btn-outline-danger" type="button" onClick={handleLogout}>Logout</button>
+    </form>
         </div>
-      </nav>       
+      </nav>  
+      <br/><br/> 
+      <Outlet/>    
       </>
   );
 }
