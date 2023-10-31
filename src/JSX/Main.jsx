@@ -1,6 +1,5 @@
 import React from "react";
-import Greeting from "./Greeting"
-import { Button, ButtonGroup } from "@mui/material";
+import { Button } from "@mui/material";
 import { NavLink, Outlet } from "react-router-dom";
 function Main() {
     const fullPageStyle = {
@@ -9,15 +8,15 @@ function Main() {
         textAlign:'center',
     };
 
-    const center = {
-        padding: '70px 0',
-        border: '3px solid green',
-        textAlign: 'center',
-        backgroundColor: "red",
-        height: '100vh',
-        width: '100%',
+    // const center = {
+    //     padding: '70px 0',
+    //     border: '3px solid green',
+    //     textAlign: 'center',
+    //     backgroundColor: "red",
+    //     height: '100vh',
+    //     width: '100%',
 
-    };
+    // };
 
     return (
         <>

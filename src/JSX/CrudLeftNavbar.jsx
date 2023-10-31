@@ -1,7 +1,6 @@
 import React from 'react';
 import '../CSS/crud.css';
 import { NavLink, Outlet } from 'react-router-dom';
-// import CrudHome from './CrudHome';
 
 const CrudLeftNavbar = () => {
   return (

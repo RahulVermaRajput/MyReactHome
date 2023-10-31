@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../../node_modules/bootstrap/dist/js/bootstrap.bundle";
+import "../../node_modules/react-toastify/dist/ReactToastify.css";
 import About from "./About";
 import Home from "./Home";
 import Services from "./Services";
 import Contact from "./Contact";
-import NavBar from "./NavBar";
 import CrudAdd from "./CrudAdd";
 import CrudUpdate from "./CrudUpdate";
 import CrudDashboard from "./CrudDashboard";
@@ -16,7 +16,18 @@ import GreetingApp from "./Greeting";
 import LoginPage from "./LoginPage";
 import SignUp from "./Signup";
 import Main from "./Main";
-function App() {
+import { ToastContainer } from "react-toastify";
+function App()
+{
+    return (
+        <>  
+
+        <ToastContainer />
+
+        {/* <NavBar/> */}
+        {/* <div style = {{padding:"28px"}}></div> */}
+        <Routes>
+           
 
     const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
 

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import "../CSS/common.css";
-import { Button, ButtonGroup } from "@mui/material";
+import { Button } from "@mui/material";
+import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -22,7 +23,7 @@ const SignUp = () => {
 
     console.log(username);
     console.log(password);
-    console.log(email);
+    console.log(loginid);
 
     if(emailPattern.test(email))
     {

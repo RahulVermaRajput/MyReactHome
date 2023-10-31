@@ -3,7 +3,12 @@ import "../CSS/Greeting.css";
 
 const hours = new Date().getHours();
 let message = "Good Morning";
-
+let username  = localStorage.getItem('username');
+console.log(username);
+if(username === '')
+{
+    username = "there";
+} 
 let bgstyle=
 {
     color:'blue'
