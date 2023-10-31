@@ -19,26 +19,17 @@ import Main from "./Main";
 import { ToastContainer } from "react-toastify";
 function App()
 {
-    return (
-        <>  
-
-        <ToastContainer />
-
-        {/* <NavBar/> */}
-        {/* <div style = {{padding:"28px"}}></div> */}
-        <Routes>
-           
-
     const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
 
     useEffect(()=>{
         let isUserValid = localStorage.getItem("isUserValid");
         console.log(isUserValid);
         setIsUserAuthenticated(isUserValid);
-    },[isUserAuthenticated])
-    
+    },[isUserAuthenticated]);
+
     return (
         <>
+        <ToastContainer />
 
             {/* <div style = {{padding:"28px"}}></div> */}
             <Routes>
@@ -64,7 +55,7 @@ function App()
                                 <Route exact path="/" element={<Home />} />
                                 <Route path="login" element={<LoginPage onLogin={() => setIsUserAuthenticated(true)} />} />
                                 <Route exact path="signup" element={<SignUp />} />
-                            </Route>
+                       return (      </Route>
                         )
                 }
 
