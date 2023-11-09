@@ -18,6 +18,9 @@ import SignUp from "./Signup";
 import Main from "./Main";
 import NavBar from "./NavBar";
 import { ToastContainer } from "react-toastify";
+import JsHome from "./JsApps/JsHome";
+import JsAppsDashboard from "./JsApps/JsAppsDashboard";
+import EMICalc from "./EMICalc";
 function App()
 {
     const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
@@ -49,6 +52,11 @@ function App()
                                     <Route exact path="crudupdate" element={<CrudUpdate />} />
                                     <Route exact path="home" element={<GreetingApp />} />
                                 </Route>
+                                <Route exact path="jsApps" element={<JsAppsDashboard />} >
+                                    <Route exact path="jsAppsHome" element={<JsHome />} />
+                                    <Route exact path="jsAppsEmiCalc" element={<EMICalc />} />
+                                </Route>
+
                             </Route>
                         )
                         :

@@ -38,6 +38,9 @@ export default function NavBar(props) {
               <li className="nav-item">
                 <NavLink className="nav-link" to="/valid/crudapp/crudhome">My CRUD App</NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/valid/jsapps/jsAppsHome">My JS Apps</NavLink>
+              </li>
              
             
             </ul>
