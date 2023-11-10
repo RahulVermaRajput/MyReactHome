@@ -47,3 +47,18 @@
   .left-navbar li:active{
     color: green;
   }
+
+  .inuputContainer{
+    display: flex;
+    justify-content: 'first baseline';
+    align-items: ;
+    flex-direction: column;
+  }
+  .inuputContainer input{
+      padding: 5px;
+      width: 200px;
+      border-radius: 2x;
+  }
+  .inuputContainer label{
+    font-weight: bold;
+  }

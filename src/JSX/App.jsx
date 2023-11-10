@@ -20,7 +20,7 @@ import NavBar from "./NavBar";
 import { ToastContainer } from "react-toastify";
 import JsHome from "./JsApps/JsHome";
 import JsAppsDashboard from "./JsApps/JsAppsDashboard";
-import EMICalc from "./EMICalc";
+import EMICalc from "./JsApps/EMICalc";
 function App()
 {
     const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
