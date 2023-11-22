@@ -31,7 +31,7 @@ const  SpaceRemover = ()=>
             <input type = "button" value = "Convert" onClick = {removeSpace} className= "btn btn-primary my-2"/>
             </div>
             <div className="col-xl-5">
-                <textarea className="space-remover" value={updatedText}  /> 
+                <textarea readonly className="space-removed"  value={updatedText}  /> 
             </div>
         </div>
     </>

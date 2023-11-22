@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route,Redirect, useNavigate } from "react-router-dom";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import "../../node_modules/react-toastify/dist/ReactToastify.css";
@@ -25,11 +25,21 @@ import SpaceRemover from "./JsApps/SpaceRemover";
 function App()
 {
     const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(()=>{
         let isUserValid = localStorage.getItem("isUserValid");
         console.log(isUserValid);
         setIsUserAuthenticated(isUserValid);
+        if(isUserValid)
+        {
+            navigate("/valid/home");
+        }
+        else{
+            navigate("/");
+        }
+        
+
     },[isUserAuthenticated]);
 
     return (
@@ -41,31 +51,30 @@ function App()
                 {
                     isUserAuthenticated ?
                         (
-                            <Route exact path="valid" element={<NavBar onLogout={()=> setIsUserAuthenticated(false)} />} >
-                                <Route exact path="home" element={<GreetingApp />} />
-                                <Route exact path="about" element={<About />} />
-                                <Route exact path="services" element={<Services />} />
-                                <Route exact path="contact" element={<Contact />} />
-                                <Route exact path="crudapp" element={<CrudDashboard />} >
-                                    <Route exact path="crudhome" element={<CrudHome />} />
-                                    <Route exact path="crudadd" element={<CrudAdd />} />
-                                    <Route exact path="crudread" element={<CrudRead />} />
-                                    <Route exact path="crudupdate" element={<CrudUpdate />} />
+                                <Route exact path="valid" element={<NavBar onLogout={()=> setIsUserAuthenticated(false)} />} >
                                     <Route exact path="home" element={<GreetingApp />} />
+                                    <Route exact path="about" element={<About />} />
+                                    <Route exact path="services" element={<Services />} />
+                                    <Route exact path="contact" element={<Contact />} />
+                                    <Route exact path="crudapp" element={<CrudDashboard />} >
+                                        <Route exact path="crudhome" element={<CrudHome />} />
+                                        <Route exact path="crudadd" element={<CrudAdd />} />
+                                        <Route exact path="crudread" element={<CrudRead />} />
+                                        <Route exact path="crudupdate" element={<CrudUpdate />} />
+                                        <Route exact path="home" element={<GreetingApp />} />
+                                    </Route>
+                                    <Route exact path="jsApps" element={<JsAppsDashboard />} >
+                                        <Route exact path="jsAppsHome" element={<JsHome />} />
+                                        <Route exact path="jsAppsEmiCalc" element={<EMICalc />} />
+                                        <Route exact path="jsAppsSpaceRemover" element={<SpaceRemover/>} />
+                                        <Route path = "*" element={<PageNotFound/>} />
+                                    </Route>
                                 </Route>
-                                <Route exact path="jsApps" element={<JsAppsDashboard />} >
-                                    <Route exact path="jsAppsHome" element={<JsHome />} />
-                                    <Route exact path="jsAppsEmiCalc" element={<EMICalc />} />
-                                    <Route exact path="jsAppsSpaceRemover" element={<SpaceRemover/>} />
-                                    <Route path = "*" element={<PageNotFound/>} />
-                                </Route>
-
-                            </Route>
+                            
                         )
                         :
                         (
                             <Route exact path="/" element={<Main />} >
-                                <Route exact path="/MyReactHome" element={<Home />} />
                                 <Route exact path="/" element={<Home />} />
                                 <Route path="login" element={<LoginPage onLogin={() => setIsUserAuthenticated(true)} />} />
                                 <Route exact path="signup" element={<SignUp />} />

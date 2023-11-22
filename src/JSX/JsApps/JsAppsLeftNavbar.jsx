@@ -23,7 +23,7 @@ const JsAppsLeftNavbar = () => {
 const Sidebar = () => {
   return (
     <div className="myLeftNavBar">
-    <div className="d-flex flex-column flex-shrink-0 pt-2 bg-light" style={{ width: '300px',background:'red' }}>
+    <div className="d-flex flex-column flex-shrink-0 pt-2 bg-light" style={{ width: '330px',background:'red' }}>
       <ul className="nav nav-pills flex-column mb-auto">
         <li className="nav-item">
           <NavLink to="/valid/jsApps/jsAppsHome" className="nav-link">JS Apps Home</NavLink>
