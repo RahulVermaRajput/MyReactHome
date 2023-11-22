@@ -21,7 +21,7 @@ function Home() {
 
     return (
         <>
-            <Greeting/>
+            <Greeting/>           
         </>
     );
 }

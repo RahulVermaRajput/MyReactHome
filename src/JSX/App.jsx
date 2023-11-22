@@ -21,6 +21,7 @@ import { ToastContainer } from "react-toastify";
 import JsHome from "./JsApps/JsHome";
 import JsAppsDashboard from "./JsApps/JsAppsDashboard";
 import EMICalc from "./JsApps/EMICalc";
+import SpaceRemover from "./JsApps/SpaceRemover";
 function App()
 {
     const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
@@ -55,6 +56,8 @@ function App()
                                 <Route exact path="jsApps" element={<JsAppsDashboard />} >
                                     <Route exact path="jsAppsHome" element={<JsHome />} />
                                     <Route exact path="jsAppsEmiCalc" element={<EMICalc />} />
+                                    <Route exact path="jsAppsSpaceRemover" element={<SpaceRemover/>} />
+                                    <Route path = "*" element={<PageNotFound/>} />
                                 </Route>
 
                             </Route>
@@ -62,10 +65,11 @@ function App()
                         :
                         (
                             <Route exact path="/" element={<Main />} >
+                                <Route exact path="/MyReactHome" element={<Home />} />
                                 <Route exact path="/" element={<Home />} />
                                 <Route path="login" element={<LoginPage onLogin={() => setIsUserAuthenticated(true)} />} />
                                 <Route exact path="signup" element={<SignUp />} />
-                       return (      </Route>
+                            </Route>
                         )
                 }
 
@@ -91,4 +95,17 @@ function NotFound() {
       </div>
     );
   }
+  function PageNotFound() {
+    return (
+      <div style = {{display:'flex',textAlign:'center',color:'white',background:'grey',height:'100vh',alignItems:'center',justifyContent:'center',
+      flexWrap:'nowrap',padding:'5px'}}>
+        <div>
+        <h1>404 - Page Not Available.</h1>
+        <p>Sorry, the page you are looking for does not exist.</p>
+        </div> 
+      </div>
+    );
+  }
 export default App;
+
+// 101597519443

@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import "../../CSS/jsapps.css";
 
@@ -18,6 +19,7 @@ function getPMT(principal,interest,tenure)
     pmt = a/e;
     console.log(pmt);
     return Math.round(pmt);
+    //return pmt.toFixed(2);
 }
 
 const getMonthlyInterest = (principal,interest)=>{
@@ -44,6 +46,8 @@ const monthlyEmiBreakup = (principal,interest,tenure)=>{
         monthlyEmiList.push(monthLyEMiData);
     }
    // console.log(monthlyEmiList);
+
+    
     return monthlyEmiList;
 } 
 
@@ -57,6 +61,7 @@ const  EMICalc = ()=>
     const [interest, setInterest]  = useState(0);
     const [tenure, setTenure]  = useState(0);
     const [emiData, setEmiData] = useState([]);
+    const [extraPay, setExtraPay] = useState(0);
 
     const calculateEMI = ()=>{
         const p = getPMT(principal,interest,tenure);
@@ -64,6 +69,7 @@ const  EMICalc = ()=>
        // console.log(emiDataList);
         setEmiData(emiDataList);
         setpmt(p);
+        setExtraPay(p*tenure-principal);
     }
 
     const resetValues = ()=>{
@@ -76,60 +82,73 @@ const  EMICalc = ()=>
 
     return (
         <>
-         <h1>EMi Calculator</h1>
-        <div className="inuputContainer">
 
-        <div class="mb-5">
-            <label for="principal" class="form-label">Principal Amount</label>
+        <h1>EMI Calculator</h1>
+            <hr/>
+
+        <div className="row">
+            <div className="col-sm-3">
+            <div className="empInputContainer">
+        <div className="">
+            <label htmlFor="principal" className="form-label">Principal Amount</label>
             <input type = "text" className="form-control" value={principal} name = "principal" id = "principal" placeholder="Enter Principal Amount" onChange={(event)=>setPrincipal(event.target.value)}/>
         </div>
 
-        <div class="mb-5">
-            <label for="interest" class="form-label">Interest % P.A</label>
+        <div className="">
+            <label htmlFor="interest" className="form-label">Interest % P.A</label>
             <input type = "text" className="form-control" value = {interest} name = "interest" id="interest" placeholder="Interest % P.A" onChange={(event)=>setInterest(event.target.value)} />
         </div>
 
-        <div class="mb-5">
-            <label for="tenure" class="form-label">Tenure(Months)</label>
-            <input type = "text" className="form-control" value={tenure} name = "tenure" id = "tenure" placeholder="Tenure(Months)" onChange={(event)=>setTenure(event.target.value)}/>
+        <div className="">
+            <label htmlFor="tenure" className="form-label">Tenure(Months)</label>
+            <input type = "text" className="form-control" value={tenure} maxLength = "2" name = "tenure" id = "tenure" placeholder="Tenure(Months)" onChange={(event)=>setTenure(event.target.value)}/>
         </div>
-        <div class="mb-5">
-            <input type = "button" value = "Calculate EMI" className="btn btn-primary btn-xs" id = "calculateEmi" onClick={calculateEMI}/>
+        <div className="mt-3">
+            <input type = "button" value = "Calculate EMI" className="btn btn-primary btn-xs me-3 mt-2" id = "calculateEmi" onClick={calculateEMI}/>
+            <input type = "button" style={{marginRight:'10px'}} className="btn btn-danger btn-xs mt-2" id ="reset" value = "Reset Values" onClick={resetValues}/>
         </div>
-        <div class="mb-0">
-            <input type = "button" style={{marginRight:'10px'}} className="btn btn-primary btn-xs" id ="reset" value = "Reset Values" onClick={resetValues}/>
-        </div>
+        <br/>
+        <h3>Extra Payment : {extraPay}</h3>
         
-        
         </div>
-
-        <h2>PMT : {pmt} </h2>
-            <hr/>
-            <hr/>
-
-
-            <table className="table table-bordered table-hover">
-                <thead className="info">
-                    <th>Sr No.</th>
-                    <th>Monthly Installment</th>
-                    <th>Interest</th>
-                    <th>Principal Repaid</th>
-                    <th>Principal Balance </th>
-                </thead>
-               
-                {
-                    emiData.map((emi,index)=>(
-                        <tr key={index}>
-                            <td>{index+1}</td>
-                            <td>{emi.emi}</td>
-                            <td>{emi.interest}</td>
-                            <td>{emi.repaid}</td>
-                            <td>{emi.balance}</td>
+            </div>
+            <div className="tableDiv col-sm-9">
+            <div className="table-responsive">
+                <table className="table table-bordered table-hover table-striped table-dark">
+                    <thead className="info">
+                       <tr className='info'>
+                            <th>Sr No.</th>
+                            <th>Monthly Installment</th>
+                            <th>Interest</th>
+                            <th>Principal Repaid</th>
+                            <th>Principal Balance </th>
                         </tr>
-                    ))
-                }
+                    </thead>
+                    <tbody>
+                    {
+                        emiData.map((emi,index)=>(
+                            <tr key={index}>
+                                <td>{index+1}</td>
+                                <td>{emi.emi}</td>
+                                <td>{emi.interest}</td>
+                                <td>{emi.repaid}</td>
+                                <td>{emi.balance}</td>
+                            </tr>
+                        ))
+                    }
+                    
+                    </tbody>
+                </table>
+
+
                
-            </table>
+
+            </div>
+            
+            </div>
+        </div>
+
+           
            
      
 
