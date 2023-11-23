@@ -23,10 +23,11 @@ import JsAppsDashboard from "./JsApps/JsAppsDashboard";
 import EMICalc from "./JsApps/EMICalc";
 import SpaceRemover from "./JsApps/SpaceRemover";
 import StringComparator from "./JsApps/StringComparator";
+import TextComparator from "./JsApps/TextComparator";
 function App()
 {
-    const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
     const navigate = useNavigate();
+    const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
 
     useEffect(()=>{
         let isUserValid = localStorage.getItem("isUserValid");
@@ -39,6 +40,7 @@ function App()
         else{
             navigate("/");
         }
+        // eslint-disable-next-line
     },[isUserAuthenticated]);
     
     return (
@@ -67,6 +69,8 @@ function App()
                                         <Route exact path="jsAppsEmiCalc" element={<EMICalc />} />
                                         <Route exact path="jsAppsSpaceRemover" element={<SpaceRemover/>} />
                                         <Route exact path="jsAppsStringComparator" element={<StringComparator/>} />
+                                        <Route exact path="jsAppsTextComparator" element={<TextComparator/>} />
+                                        
                                         <Route path = "*" element={<PageNotFound/>} />
                                     </Route>
                                 </Route>

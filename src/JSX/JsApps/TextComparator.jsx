@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import "../../CSS/jsapps.css";
-import StringComparatorDiff from './StringComparatorDiff';
-import TextComparator from './TextComparator';
 
-const StringComparator = () => {
+const TextComparator = () => {
   const [string1, setString1] = useState('');
   const [string2, setString2] = useState('');
   const [differences, setDifferences] = useState([]);
@@ -36,8 +34,7 @@ const StringComparator = () => {
         <hr/>
 <TextAreaExample/>
 <hr/>
-{/* <TextComparator/> */}
-<hr/><hr/><hr/>
+
       <textarea className="string-compare-text"
         placeholder="Enter string 1" wrap='off'
         value={string1}
@@ -95,4 +92,4 @@ const TextAreaExample = () => {
   );
 };
 
-export default StringComparator;
+export default TextComparator;
