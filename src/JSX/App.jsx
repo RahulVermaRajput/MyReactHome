@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Routes, Route,Redirect, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import "../../node_modules/react-toastify/dist/ReactToastify.css";
@@ -22,6 +22,7 @@ import JsHome from "./JsApps/JsHome";
 import JsAppsDashboard from "./JsApps/JsAppsDashboard";
 import EMICalc from "./JsApps/EMICalc";
 import SpaceRemover from "./JsApps/SpaceRemover";
+import StringComparator from "./JsApps/StringComparator";
 function App()
 {
     const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
@@ -38,10 +39,8 @@ function App()
         else{
             navigate("/");
         }
-        
-
     },[isUserAuthenticated]);
-
+    
     return (
         <>
         <ToastContainer />
@@ -67,6 +66,7 @@ function App()
                                         <Route exact path="jsAppsHome" element={<JsHome />} />
                                         <Route exact path="jsAppsEmiCalc" element={<EMICalc />} />
                                         <Route exact path="jsAppsSpaceRemover" element={<SpaceRemover/>} />
+                                        <Route exact path="jsAppsStringComparator" element={<StringComparator/>} />
                                         <Route path = "*" element={<PageNotFound/>} />
                                     </Route>
                                 </Route>
