@@ -17,7 +17,15 @@ const TextComparator = () => {
     setDifferences(diffArray);
   };
 
+  const clearText = () => {
+    setString1('');
+    setString2('');
+    setDifferences([]);
+  };
+
+
   const renderHighlightedText = (text, differences) => {
+   // console.log(differences);
     return text.split('').map((char, index) => {
       const isDifferent = differences.includes(index);
       return (
@@ -32,8 +40,8 @@ const TextComparator = () => {
     <div>
         <h1>String Comprator</h1>
         <hr/>
-<TextAreaExample/>
-<hr/>
+        {/* <TextAreaExample/>
+        <hr/> */}
 
       <textarea className="string-compare-text"
         placeholder="Enter string 1" wrap='off'
@@ -45,14 +53,21 @@ const TextComparator = () => {
         value={string2}
         onChange={(e) => setString2(e.target.value)}
       />
-      <button onClick={findDifferences}>Find Differences</button>
-      <div>
-        <p>Differences:</p>
-        <div>
+     
+      <button className='btn btn-primary btn-sm mx-2' onClick={findDifferences}>Find Differences</button>
+      <button className='btn btn-danger btn-sm mx-2' onClick={clearText}>Clear Text</button>
+     
+      <br/> <br/>
+      <div className='mx-2'>
+        <h2>{differences.length} differences found.</h2>
+        <hr/>
+        <div className='row'>
+        <div className='col-lg-6 comparisonView'>
           {renderHighlightedText(string1, differences)}
         </div>
-        <div>
+        <div className='col-lg-6 comparisonView'>
           {renderHighlightedText(string2, differences)}
+        </div>
         </div>
       </div>
     </div>

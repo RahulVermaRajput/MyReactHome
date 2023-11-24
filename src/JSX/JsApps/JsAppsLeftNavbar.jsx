@@ -35,7 +35,7 @@ const Sidebar = () => {
           <NavLink to="/valid/jsApps/jsAppsSpaceRemover" className="nav-link">Multi Space Remover</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/valid/jsApps/jsAppsStringComparator" className="nav-link">String Comparator</NavLink>
+          <NavLink to="/valid/jsApps/jsAppsNumberToWords" className="nav-link">Num to Words</NavLink>
         </li>
         <li className="nav-item">
           <NavLink to="/valid/jsApps/jsAppsTextComparator" className="nav-link">Text Comparator</NavLink>

@@ -7,8 +7,8 @@
     flex: 1;
     padding: 20px;
     background: #eeece8;
-    height: 100vh;
-    min-height: fit-content;
+    height: 100%;
+    min-height: 100vh;
   }
 
   .left-navbar {
@@ -129,6 +129,18 @@
   resize:none;
   border-radius: 3px;
   padding: 5px;
-  margin-left: 5px;
+  margin-left: 10px;
  
+}
+.comparisonView{
+  width: 48%;
+  margin-left: 10px;
+  min-height: 200px;
+  padding: 5px;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  background-color: black;
+  border: 0.5px solid black;
+  border-radius: 3px;
+  color: white;
 }

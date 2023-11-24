@@ -24,6 +24,7 @@ import EMICalc from "./JsApps/EMICalc";
 import SpaceRemover from "./JsApps/SpaceRemover";
 import StringComparator from "./JsApps/StringComparator";
 import TextComparator from "./JsApps/TextComparator";
+import NumberToWords from "./JsApps/NumberToWords";
 function App()
 {
     const navigate = useNavigate();
@@ -68,7 +69,7 @@ function App()
                                         <Route exact path="jsAppsHome" element={<JsHome />} />
                                         <Route exact path="jsAppsEmiCalc" element={<EMICalc />} />
                                         <Route exact path="jsAppsSpaceRemover" element={<SpaceRemover/>} />
-                                        <Route exact path="jsAppsStringComparator" element={<StringComparator/>} />
+                                        <Route exact path="jsAppsNumberToWords" element={<NumberToWords/>} />
                                         <Route exact path="jsAppsTextComparator" element={<TextComparator/>} />
                                         
                                         <Route path = "*" element={<PageNotFound/>} />
