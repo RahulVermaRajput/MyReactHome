@@ -1,0 +1,138 @@
+/* AnalogClock.css */
+
+.clock {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 2px solid #333;
+    border-radius: 0%;
+    margin: 20px auto;
+    background-color: white;
+    
+  }
+  
+  .dial {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+  }
+
+  .number {
+    position: absolute;
+    font-size: 16px;
+  }
+
+  .number-12 {
+    top: 0px;
+    left: 200px;
+  }
+
+  .number-1{
+    top: 0px;
+    left: 300px;
+  }
+  .number-2{
+    top: 100px;
+    right: 10px;
+  }
+  .number-3 {
+    top: 200px;
+    right: 00px;
+  }
+  .number-4 {
+    top: 300px;
+    right: 00px;
+  }
+  .number-5 {
+    bottom: 000px;
+    left: 300px;
+  }
+  .number-6 {
+    bottom: 000px;
+    left: 200px;
+  }
+  .number-7 {
+    bottom: 000px;
+    left: 100px;
+  }
+  .number-8 {
+    top: 300px;
+    left:00px;
+  }
+  .number-9 {
+    top: 200px;
+    left: 00px;
+  }
+  .number-10 {
+    top: 100px;
+    left:00px;
+  }
+  .number-11 {
+    top: 000px;
+    left: 100px;
+  }
+ 
+
+  /* .number-3 {
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+  
+  .number-6 {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+  
+  .number-9 {
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+   */
+  /* .number-12 {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } */
+  
+  
+  .hand {
+    position: absolute;
+    background-color: #333;
+    transform-origin: center;
+  }
+  
+  .hour-hand {
+    width: 5px;
+    height: 40px;
+    top: calc(50% - 40px);
+  }
+  
+  .minute-hand {
+    width: 4px;
+    height: 60px;
+    top: calc(50% - 60px);
+  }
+  
+  .second-hand {
+    width: 2px;
+    height: 70px;
+    top: calc(50% - 70px);
+  }
+  
+  .center-circle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  

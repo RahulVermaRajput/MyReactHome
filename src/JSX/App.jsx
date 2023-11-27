@@ -25,6 +25,8 @@ import SpaceRemover from "./JsApps/SpaceRemover";
 import StringComparator from "./JsApps/StringComparator";
 import TextComparator from "./JsApps/TextComparator";
 import NumberToWords from "./JsApps/NumberToWords";
+import Clock from "./JsApps/Clock";
+import SolarSystem from "./JsApps/SolarSystem";
 function App()
 {
     const navigate = useNavigate();
@@ -71,6 +73,8 @@ function App()
                                         <Route exact path="jsAppsSpaceRemover" element={<SpaceRemover/>} />
                                         <Route exact path="jsAppsNumberToWords" element={<NumberToWords/>} />
                                         <Route exact path="jsAppsTextComparator" element={<TextComparator/>} />
+                                        <Route exact path="jsAppsClock" element={<Clock/>} />
+                                        <Route exact path="jsAppsSolarSystem" element={<SolarSystem/>} />
                                         
                                         <Route path = "*" element={<PageNotFound/>} />
                                     </Route>
