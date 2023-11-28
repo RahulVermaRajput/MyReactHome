@@ -2,32 +2,68 @@
 
 .clock {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border: 2px solid #333;
-    border-radius: 0%;
+    border-radius: 50%;
     margin: 20px auto;
     background-color: white;
     
   }
-  
-  .dial {
+
+
+  .center-circle {
     position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
+    z-index: 20;
   }
+
+  .dial {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transform-origin: -50% -50%;
+    border-radius: 50%;
+   
+  }
+
+  .dialLines{
+    position: absolute;
+    width: 1px;
+    height: 15px;
+    transform-origin: 0% 148px;
+    z-index: 2;
+    background-color: black;
+    left: 50%;
+    margin-left: -1px;
+  }
+  .dialLines:nth-of-type(5n){
+    position: absolute;
+    width: 3px;
+    height: 15px;
+    transform-origin: 0% 148px;
+    z-index: 2;
+    background-color: black;
+    left: 50%;
+    margin-left: -1px;
+  }
+
+
 
   .number {
     position: absolute;
     font-size: 16px;
+    font-weight: bold;
   }
 
   .number-12 {
-    top: 0px;
-    left: 200px;
+    top: 15px;
+    left: 46%;
   }
 
   .number-1{
@@ -39,8 +75,8 @@
     right: 10px;
   }
   .number-3 {
-    top: 200px;
-    right: 00px;
+    top: 136px;
+    right: 20px;
   }
   .number-4 {
     top: 300px;
@@ -51,8 +87,8 @@
     left: 300px;
   }
   .number-6 {
-    bottom: 000px;
-    left: 200px;
+    bottom: 20px;
+    left: 142px;
   }
   .number-7 {
     bottom: 000px;
@@ -63,8 +99,8 @@
     left:00px;
   }
   .number-9 {
-    top: 200px;
-    left: 00px;
+    top: 135px;
+    left: 20px;
   }
   .number-10 {
     top: 100px;
@@ -105,34 +141,50 @@
     position: absolute;
     background-color: #333;
     transform-origin: center;
+    transform-origin: -50% -50%;
   }
   
   .hour-hand {
-    width: 5px;
-    height: 40px;
-    top: calc(50% - 40px);
+    position: absolute;
+    z-index: 7;
+    width: 8px;
+    height: 100px;
+    background: black;
+    top: 5px;
+    lefT: 48%;
+    margin-left: -1px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    transform-origin: 50% 125px;
   }
   
   .minute-hand {
-    width: 4px;
-    height: 60px;
-    top: calc(50% - 60px);
+    position: absolute;
+    z-index: 7;
+    width: 8px;
+    height: 120px;
+    background: black;
+    top: 22px;
+    lefT: 50%;
+    margin-left: -1px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    transform-origin: 50% 125px;
   }
   
   .second-hand {
-    width: 2px;
-    height: 70px;
-    top: calc(50% - 70px);
+    position: absolute;
+    z-index: 10;
+    width: 4px;
+    height: 120px;
+    background: gold;
+    top: 22px;
+    lefT: 50%;
+    margin-left: -1px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    transform-origin: 50% 125px;
   }
   
-  .center-circle {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #333;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  
   
