@@ -46,7 +46,7 @@ function GreetingApp()
    <div className="container-fluid">
     <div className="row">
         <div className="col-sm-12 my-5">
-        <div className="msgBox" style = {{background:bgstyle.background,width:"400px",color:bgstyle.color}} >
+        <div className="msgBox" style = {{background:bgstyle.background,color:bgstyle.color}} >
             <h1>Hello, {!!name?name:'There'} <br/><span> {message}</span></h1>
         </div>
         </div>

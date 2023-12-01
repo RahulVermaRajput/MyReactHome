@@ -52,11 +52,11 @@ const LoginPage = (props) => {
         <h2>Login Here</h2>
         <br/>
         <div className="form-floating mb-3">
-          <input type="email" className="form-control" onChange={(event)=>{setUsername(event.target.value)}} id="floatingInput" placeholder="name@example.com" />
+          <input type="email" className="form-control" style={{minWidth:'300px'}} onChange={(event)=>{setUsername(event.target.value)}} id="floatingInput" placeholder="name@example.com" />
           <label htmlFor="floatingInput">Email address</label>
         </div>
         <div className="form-floating">
-          <input type="password" className="form-control" onChange={(event)=>{setPassword(event.target.value)}} id="floatingPassword" placeholder="Password" />
+          <input type="password" className="form-control" style={{minWidth:'300px'}} onChange={(event)=>{setPassword(event.target.value)}} id="floatingPassword" placeholder="Password" />
           <label htmlFor="floatingPassword">Password</label>
         </div>
         <br />

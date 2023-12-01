@@ -22,17 +22,15 @@ function Main() {
         <>
             {/* <Greeting/> */}
             <div className="container-fluid" style={fullPageStyle}>
-
                 <div className="row">
-                    <div className="col-sm-2 p-3 bg-dark">
-                    <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+                    <div className="col-md-2 p-3 bg-dark left-menu-container">
                     <NavLink to="/" className="nav-link" ><Button variant="outlined" style = {{width:'120px'}}> Home </Button></NavLink>
                         <br />
                     <NavLink to="/login" className="nav-link" > <Button variant="outlined" style = {{width:'120px'}}> Login </Button></NavLink>
                         <br />
                     <NavLink to="/signup" className="nav-link" ><Button variant="outlined" style = {{width:'120px'}}> Sign Up </Button></NavLink>
                     </div>
-                    <div className="col-sm-10 p-3 bg-secondary" style={fullPageStyle}>
+                    <div className="col-md-10 p-3 bg-secondary" style={fullPageStyle}>
                        <Outlet/>
                     </div>
                 </div>

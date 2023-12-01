@@ -1,3 +1,11 @@
+.left-menu-container{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+}
 .btn1 
 {
     padding:10px 20px;
@@ -29,12 +37,45 @@
     color:black;
 }
 .loginform{
-    width: 40%;
-    margin-left: 30%;
-    margin-top: 10%;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+    height: 60vh;
+}
+@media screen and (max-width:768px) {
+    .left-menu-container{
+        display: flex;
+        align-content: space-between;
+        flex-wrap: wrap;
+        align-items:center;
+        flex-direction: row;
+    } 
 }
 .signupform{
-    width: 40%;
-    margin-left: 30%;
-    margin-top: 10%;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+    height: 60vh;
 }
+
+.signupform input{
+    min-width: 300px;
+}
+
+@media screen and (max-width:576px){
+    .logoutform{
+        display: none !important;       
+    }
+}
+@media screen and (min-width:576px){
+    .logoutLiBtn{
+        display: none !important;       
+    }
+}
+

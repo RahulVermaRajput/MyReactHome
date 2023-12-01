@@ -16,5 +16,17 @@
     padding:2px 20px;
     width: 30%;
     background-color: aqua;
-    margin-left: 1%;
+    width: 400px;
+}
+@media screen and (max-width:768px) {
+    .msgBox
+    {
+        border:1px solid rgb(31, 65, 205);
+        box-shadow: 2px 2px 2px 2px grey;
+        border-radius: 10px;
+        padding:2px 20px;
+        width: 100%;
+        background-color: aqua;
+        margin-top: 5%;
+    }
 }

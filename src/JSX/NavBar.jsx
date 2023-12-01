@@ -26,7 +26,7 @@ export default function NavBar(props) {
               <li className="nav-item">
                 <NavLink className="nav-link" to="/valid/home">Home</NavLink>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <NavLink className="nav-link" to="/valid/services">Services</NavLink>
               </li>
               <li className="nav-item">
@@ -34,7 +34,7 @@ export default function NavBar(props) {
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/valid/contact">Contact Us</NavLink>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <NavLink className="nav-link" to="/valid/crudapp/crudhome">My CRUD App</NavLink>
               </li>
@@ -42,12 +42,15 @@ export default function NavBar(props) {
                 <NavLink className="nav-link" to="/valid/jsapps/jsAppsHome">My JS Apps</NavLink>
               </li>
              
+              <form className="d-flex logoutLiBtn">
+                <button className="btn btn-outline-danger" type="button" onClick={handleLogout}>Logout</button>
+              </form>
             
             </ul>
           </div>
-          <form className="d-flex">
-          <button className="btn btn-outline-danger" type="button" onClick={handleLogout}>Logout</button>
-    </form>
+          <form className="d-flex logoutform">
+           <button className="btn btn-outline-danger" type="button" onClick={handleLogout}>Logout</button>
+          </form>
         </div>
       </nav>  
       <br/><br/> 

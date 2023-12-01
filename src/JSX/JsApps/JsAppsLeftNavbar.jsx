@@ -7,7 +7,7 @@ const JsAppsLeftNavbar = () => {
     <>
       <div className='container-fluid'>
         <div className="row">
-          <div className="col-sm-2 mx-auto " style={{padding:'0px',background:'grey'}}>
+          <div className="col-sm-2 mx-auto myLeftNavBar" style={{padding:'0px',background:'grey'}}>
             <Sidebar />
           </div>
           <div className="col-sm-10  content">
@@ -22,7 +22,7 @@ const JsAppsLeftNavbar = () => {
 
 const Sidebar = () => {
   return (
-    <div className="myLeftNavBar">
+    <div className="myLeftNavBar1">
     <div className="d-flex flex-column flex-shrink-0 pt-2 bg-light" style={{ width: '330px',background:'red' }}>
       <ul className="nav nav-pills flex-column mb-auto">
         <li className="nav-item">
@@ -40,9 +40,9 @@ const Sidebar = () => {
         <li className="nav-item">
           <NavLink to="/valid/jsApps/jsAppsTextComparator" className="nav-link">Text Comparator</NavLink>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <NavLink to="/valid/jsApps/jsAppsClock" className="nav-link">JS Clock</NavLink>
-        </li>
+        </li> */}
         <li className="nav-item">
           <NavLink to="/valid/jsApps/jsAppsSolarSystem" className="nav-link">Solar System</NavLink>
         </li>
