@@ -87,7 +87,8 @@
   }
 .myLeftNavBar
 {
-  background-color: red;
+    padding:'0px';
+    background:'grey';
 }
 
   .myLeftNavBar .nav-pills .nav-link {
@@ -149,8 +150,16 @@
   border-radius: 3px;
   color: white;
 }
-.flex-column
-{
-    /* flex-direction: column!important; */
-    overflow-x: scroll;
+
+@media screen and (max-width: 576px) {
+  .nav-link {
+    text-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 576px) {
+.flex-column {
+  flex-direction: row !important;
+  flex-wrap: nowrap;
+}
 }
