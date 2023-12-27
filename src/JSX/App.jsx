@@ -27,6 +27,8 @@ import TextComparator from "./JsApps/TextComparator";
 import NumberToWords from "./JsApps/NumberToWords";
 import Clock from "./JsApps/Clock";
 import SolarSystem from "./JsApps/SolarSystem";
+import UseMemoEx from "./JsApps/UseMemoEx";
+import TextPrettifier from "./JsApps/TextPrettifier";
 function App()
 {
     const navigate = useNavigate();
@@ -75,7 +77,10 @@ function App()
                                         <Route exact path="jsAppsTextComparator" element={<TextComparator/>} />
                                         <Route exact path="jsAppsClock" element={<Clock/>} />
                                         <Route exact path="jsAppsSolarSystem" element={<SolarSystem/>} />
+                                        <Route exact path="jsAppsUseMemo" element={<UseMemoEx/>} />
+                                        <Route exact path="jsAppsTextPrettifier" element={<TextPrettifier/>} />
                                         
+
                                         <Route path = "*" element={<PageNotFound/>} />
                                     </Route>
                                 </Route>

@@ -28,6 +28,9 @@ const Sidebar = () => {
           <NavLink to="/valid/jsApps/jsAppsHome" className="nav-link">JS Apps Home</NavLink>
         </li>
         <li className="nav-item">
+          <NavLink to="/valid/jsApps/jsAppsTextPrettifier" className="nav-link">Text Pretifier</NavLink>
+        </li>
+        <li className="nav-item">
           <NavLink to="/valid/jsApps/jsAppsEmiCalc" className="nav-link" >EMI Calculator</NavLink>
         </li>
         <li className="nav-item">
@@ -44,6 +47,9 @@ const Sidebar = () => {
         </li> */}
         <li className="nav-item">
           <NavLink to="/valid/jsApps/jsAppsSolarSystem" className="nav-link">Solar System</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink to="/valid/jsApps/jsAppsUseMemo" className="nav-link">Use of useMemo</NavLink>
         </li>
       </ul>
     </div>

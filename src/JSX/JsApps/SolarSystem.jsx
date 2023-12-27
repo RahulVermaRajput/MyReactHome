@@ -6,14 +6,11 @@ import '../../CSS/SolarSystem.css';
 const SolarSystem = () => {
   return (
     <>
-    {/* <div class="container">
-        <div class="sun"> </div>
-        <div class="earth">
-          <div class="moon"></div>
-        </div>
-    </div> */}
+   
+    <h1>Solar System (Copied for Practicing)</h1>
     <hr/>
     <div class="mycontainer">
+      
         <div class="mysun"> 
         <div class="myearth">
           <div class="mymoon"></div>
